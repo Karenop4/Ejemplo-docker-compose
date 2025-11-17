@@ -83,7 +83,7 @@ Para detener y eliminar volúmenes (incluyendo datos de la BD):
 docker-compose down -v
 ```
 
-## 📝 Comandos
+## Comandos
 
 ### Ver logs de un servicio específico
 ```bash
@@ -107,7 +107,7 @@ docker-compose exec users-service sh
 docker-compose exec db psql -U user -d usersdb
 ```
 
-## 🔌 Conectar a PostgreSQL
+## Conectar a PostgreSQL
 
 Desde el cliente SQL o la terminal:
 
@@ -125,14 +125,14 @@ O usando `psql` desde terminal:
 psql -h localhost -U user -d usersdb
 ```
 
-## 🏗️ Build Dockerfile
+## Build Dockerfile
 
 El proyecto usa un **Dockerfile multi-stage**:
 
 1. **Etapa de Build**: Compila el código TypeScript
 2. **Etapa de Runtime**: Ejecuta solo la aplicación compilada (imagen más ligera)
 
-## ⚙️ Variables de Entorno
+## Variables de Entorno
 
 El proyecto espera un archivo `.env` en `users-service/`. Con las variables necesarias para conectar a PostgreSQL.
  
@@ -145,7 +145,7 @@ DATABASE_PASSWORD=pass
 DATABASE_NAME=usersdb
 ```
 
-## 📚 Recursos Adicionales
+## Recursos Adicionales
 
 - [Documentación Docker Compose](https://docs.docker.com/compose/)
 - [Documentación NestJS](https://docs.nestjs.com/)
