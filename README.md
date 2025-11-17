@@ -2,24 +2,22 @@
 
 Este proyecto es un microservicio de usuarios construido con **NestJS** y **PostgreSQL**, orquestado completamente con **Docker Compose**.
 
-## 📋 Requisitos Previos
+## Requisitos Previos
 
 - **Docker**: [Descargar Docker Desktop](https://www.docker.com/products/docker-desktop)
 - **Docker Compose**: (incluido con Docker Desktop)
-- **Git** (opcional, para clonar el repositorio)
+- **Git** (para clonar el repositorio)
 
-Para verificar que tienes Docker instalado correctamente, ejecuta:
+Para verificar Docker instalado correctamente:
 
 ```bash
 docker --version
 docker-compose --version
 ```
 
-## 🚀 Ejecutar el Proyecto Completo
+## Ejecutar el Proyecto Completo
 
-### Opción 1: Comando Rápido (Recomendado)
-
-Desde la raíz del proyecto, ejecuta:
+Desde la raíz del proyecto, ejecutar:
 
 ```bash
 docker-compose up --build
@@ -31,21 +29,7 @@ Este comando:
 - **Levantará** la base de datos PostgreSQL en el puerto `5432`
 - **Creará** los volúmenes necesarios para persistencia de datos
 
-### Opción 2: Ejecución en Background
-
-Si prefieres que los servicios se ejecuten en segundo plano:
-
-```bash
-docker-compose up -d --build
-```
-
-Luego, para ver los logs:
-
-```bash
-docker-compose logs -f
-```
-
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 ejemplo_docker_compose/
@@ -68,7 +52,7 @@ ejemplo_docker_compose/
     └── test/                 # Tests
 ```
 
-## 🔧 Servicios Incluidos
+## Servicios Incluidos
 
 ### Users Service
 - **Framework**: NestJS 10
@@ -85,7 +69,7 @@ ejemplo_docker_compose/
 - **Base de Datos**: `usersdb`
 - **Volumen Persistente**: `db-data`
 
-## 🛑 Detener los Servicios
+## Detener los Servicios
 
 Para detener todos los servicios:
 
@@ -151,8 +135,8 @@ El proyecto usa un **Dockerfile multi-stage**:
 ## ⚙️ Variables de Entorno
 
 El proyecto espera un archivo `.env` en `users-service/`. Con las variables necesarias para conectar a PostgreSQL.
-
-Ejemplo `.env`:
+ 
+`.env`:
 ```
 DATABASE_HOST=db
 DATABASE_PORT=5432
